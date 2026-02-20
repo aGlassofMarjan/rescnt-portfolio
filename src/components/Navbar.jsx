@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <>
             <nav className="fixed top-0 left-0 w-full z-50 bg-rescnt-white/80 backdrop-blur-md border-b border-rescnt-gray-medium transition-all duration-300">
-                <div className="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center relative">
+                <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex justify-between items-center relative">
 
                     {/* Left Links - Desktop (Hidden on mobile) */}
                     <div className="hidden lg:flex gap-8 text-sm tracking-widest font-heading uppercase text-rescnt-gray-dark flex-1">
@@ -16,7 +16,7 @@ const Navbar = () => {
 
                     {/* Center Logo */}
                     <div className="absolute left-1/2 transform -translate-x-1/2">
-                        <a href="#" className="font-heading font-black text-2xl tracking-[0.2em] text-rescnt-black">
+                        <a href="#" className="font-heading font-black text-xl md:text-2xl tracking-[0.2em] text-rescnt-black">
                             RESCNT
                         </a>
                     </div>
