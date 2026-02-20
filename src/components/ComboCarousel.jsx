@@ -88,10 +88,10 @@ const ComboCarousel = () => {
                                 exit="exit"
                                 className="w-full"
                             >
-                                <h3 className="text-3xl md:text-5xl font-heading font-black text-rescnt-black mb-6 leading-tight tracking-tighter">
+                                <h3 className="text-2xl md:text-5xl font-heading font-black text-rescnt-black mb-6 leading-tight tracking-tighter">
                                     {combos[currentIndex].title}
                                 </h3>
-                                <p className="font-sans text-rescnt-gray-dark text-sm md:text-base leading-relaxed mb-10 max-w-md">
+                                <p className="font-sans text-rescnt-gray-dark text-xs md:text-base leading-relaxed mb-10 max-w-md">
                                     {combos[currentIndex].description}
                                 </p>
                             </motion.div>

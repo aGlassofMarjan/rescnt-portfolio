@@ -51,8 +51,8 @@ const ShopGrid = () => {
 
                 {/* Section Header */}
                 <div className="mb-16 text-center md:text-left">
-                    <h2 className="text-3xl md:text-4xl text-rescnt-black mb-4">CURATED ESSENTIALS</h2>
-                    <p className="text-rescnt-gray-dark font-sans max-w-md">Discover our signature blends, crafted for the modern individual who appreciates the space between notes.</p>
+                    <h2 className="text-2xl md:text-4xl text-rescnt-black mb-4">CURATED ESSENTIALS</h2>
+                    <p className="text-rescnt-gray-dark font-sans max-w-md text-sm md:text-base">Discover our signature blends, crafted for the modern individual who appreciates the space between notes.</p>
                 </div>
 
                 {/* Masonry-Style Grid */}
@@ -82,10 +82,10 @@ const ShopGrid = () => {
                             {/* Product Details (Hidden by default, shown on hover/always visible on mobile optionally, doing always visible clean style here) */}
                             <div className="absolute bottom-0 left-0 w-full p-6 lg:p-8 flex justify-between items-end z-20">
                                 <div>
-                                    <h3 className="text-rescnt-white text-xl md:text-2xl font-bold uppercase tracking-tight mb-1">{product.name}</h3>
-                                    <p className="text-rescnt-gray-light text-sm font-sans">{product.description}</p>
+                                    <h3 className="text-rescnt-white text-lg md:text-2xl font-bold uppercase tracking-tight mb-1">{product.name}</h3>
+                                    <p className="text-rescnt-gray-light text-xs md:text-sm font-sans">{product.description}</p>
                                 </div>
-                                <div className="text-rescnt-white font-heading font-bold text-lg">
+                                <div className="text-rescnt-white font-heading font-bold text-base md:text-lg">
                                     {product.price}
                                 </div>
                             </div>

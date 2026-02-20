@@ -101,10 +101,10 @@ const NewsCarousel = () => {
                                 exit="exit"
                                 className="w-full max-w-md"
                             >
-                                <h3 className="text-4xl md:text-5xl font-heading font-black text-rescnt-black mb-6 leading-tight">
+                                <h3 className="text-3xl md:text-5xl font-heading font-black text-rescnt-black mb-6 leading-tight">
                                     {newsItems[currentIndex].title}
                                 </h3>
-                                <p className="font-sans text-rescnt-gray-dark text-sm md:text-base leading-relaxed mb-10">
+                                <p className="font-sans text-rescnt-gray-dark text-xs md:text-base leading-relaxed mb-10">
                                     {newsItems[currentIndex].description}
                                 </p>
 
