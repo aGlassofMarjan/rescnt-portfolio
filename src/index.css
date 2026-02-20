@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: "Inter", sans-serif;
+    --font-heading: "Montserrat", sans-serif;
+    
+    --color-rescnt-white: #fafafa;
+    --color-rescnt-gray-light: #f5f5f5;
+    --color-rescnt-gray-medium: #e5e5e5;
+    --color-rescnt-gray-dark: #737373;
+    --color-rescnt-black: #171717;
+}
+
+@layer base {
+    body {
+        @apply bg-rescnt-white text-rescnt-black font-sans antialiased;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading font-bold uppercase tracking-tight;
+    }
+}
