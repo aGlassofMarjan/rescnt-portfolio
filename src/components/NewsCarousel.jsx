@@ -41,6 +41,11 @@ const NewsCarousel = () => {
         setCurrentIndex((prev) => (prev - 1 + newsItems.length) % newsItems.length);
     };
 
+    const swipeConfidenceThreshold = 10000;
+    const swipePower = (offset, velocity) => {
+        return Math.abs(offset) * velocity;
+    };
+
     // Auto-play functionality
     useEffect(() => {
         if (!isAutoPlaying) return;
@@ -166,7 +171,18 @@ const NewsCarousel = () => {
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 }
                             }}
-                            className="absolute inset-0 w-full h-full object-cover object-center"
+                            className="absolute inset-0 w-full h-full object-cover object-center cursor-grab active:cursor-grabbing"
+                            drag="x"
+                            dragConstraints={{ left: 0, right: 0 }}
+                            dragElastic={1}
+                            onDragEnd={(e, { offset, velocity }) => {
+                                const swipe = swipePower(offset.x, velocity.x);
+                                if (swipe < -swipeConfidenceThreshold) {
+                                    nextSlide();
+                                } else if (swipe > swipeConfidenceThreshold) {
+                                    prevSlide();
+                                }
+                            }}
                         />
                     </AnimatePresence>
                 </div>

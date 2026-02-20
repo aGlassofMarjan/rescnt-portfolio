@@ -43,6 +43,11 @@ const ComboCarousel = () => {
         setCurrentIndex((prev) => (prev - 1 + combos.length) % combos.length);
     };
 
+    const swipeConfidenceThreshold = 10000;
+    const swipePower = (offset, velocity) => {
+        return Math.abs(offset) * velocity;
+    };
+
     // Framer Motion variants for the sliding image
     const slideVariants = {
         enter: (direction) => ({
@@ -148,7 +153,18 @@ const ComboCarousel = () => {
                                 x: { type: "spring", stiffness: 300, damping: 30 },
                                 opacity: { duration: 0.2 }
                             }}
-                            className="absolute inset-0 w-full h-full object-cover object-center"
+                            className="absolute inset-0 w-full h-full object-cover object-center cursor-grab active:cursor-grabbing"
+                            drag="x"
+                            dragConstraints={{ left: 0, right: 0 }}
+                            dragElastic={1}
+                            onDragEnd={(e, { offset, velocity }) => {
+                                const swipe = swipePower(offset.x, velocity.x);
+                                if (swipe < -swipeConfidenceThreshold) {
+                                    nextCombo();
+                                } else if (swipe > swipeConfidenceThreshold) {
+                                    prevCombo();
+                                }
+                            }}
                         />
                     </AnimatePresence>
 
