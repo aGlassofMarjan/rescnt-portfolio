@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ComboCarousel from './components/ComboCarousel';
 import ShopGrid from './components/ShopGrid';
-import WorkWithUs from './components/WorkWithUs';
+import NewsCarousel from './components/NewsCarousel';
 import Footer from './components/Footer';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
         <Hero />
         <ComboCarousel />
         <ShopGrid />
-        <WorkWithUs />
+        <NewsCarousel />
       </main>
 
       <Footer />
