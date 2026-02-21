@@ -84,6 +84,7 @@ const NewsCarousel = () => {
 
     return (
         <section
+            id="news"
             className="w-full bg-rescnt-white py-24 md:py-32 border-t border-rescnt-gray-medium overflow-hidden"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
